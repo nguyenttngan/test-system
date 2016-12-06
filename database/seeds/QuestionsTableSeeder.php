@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Category;
+use Faker\Factory as Faker;
+use App\Question;
 class QuestionsTableSeeder extends Seeder
 {
     /**
@@ -11,6 +13,12 @@ class QuestionsTableSeeder extends Seeder
      */
     public function run()
     {
-       factory(App\Question::class, 10)->create();
+
+        $categories = Category::all();
+        foreach($categories as $category){
+            factory(Question::class, 5)->create([
+                'category_id' => $category->id,
+            ]);
+        }
     }
 }

@@ -24,11 +24,16 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Question::class, function (Faker\Generator $faker) {
-
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+        'content'=>$faker->text($maxNbChars = 50),
+    ];
+});
+$factory->define(App\Result::class, function (Faker\Generator $faker) {
+    return [
+        'content'=>$faker->text($maxNbChars = 20),
+    ];
+});
+$factory->define(App\Answer::class, function (Faker\Generator $faker) {
+    return [
     ];
 });
