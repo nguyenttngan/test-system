@@ -8,6 +8,6 @@ class QuestionsController extends Controller
 {
     public function __invoke() 
     {
-    	return 'hello';
+    	return 'hellohehehe';
     }
 }
