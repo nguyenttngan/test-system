@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request2;
+use Illuminate\Http\Request;
 
 class QuestionsController extends Controller
 {
-    public function __invoke() 
-    {
-    	return 'hellohehehe';
-    }
+    //
 }
