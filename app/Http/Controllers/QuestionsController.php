@@ -6,8 +6,11 @@ use Illuminate\Http\Request;
 
 class QuestionsController extends Controller
 {
+
     public function index()
     {
         return 'conflict 4';
     }
+	
+>>>>>>> conflict 4
 }
